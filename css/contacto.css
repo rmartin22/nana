@@ -1,0 +1,170 @@
+/* Estilos globales */
+html, body {
+    height: 100%; /* Asegura que html y body ocupen toda la altura */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #ffe6e6, #ffffff);
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en una columna */
+    min-height: 100%; /* Asegura que el body ocupe toda la altura */
+}
+
+/* Sección principal */
+main {
+    flex-grow: 1;
+    max-width: 1100px; /* Limita el ancho del contenido */
+    margin: 0 auto; /* Centra el contenido */
+    padding: 20px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: red; /* Cambiado a rojo sólido */
+    color: white;
+    padding: 15px 5%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav {
+    background: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias filas */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem; /* Tamaño de texto adaptable */
+}
+
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+/* Sección de Contacto */
+.contact {
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px; /* Limita el ancho del texto */
+    margin: 0 auto 20px; /* Centrado y márgenes adecuados */
+}
+.social-media {
+    display: flex;
+    justify-content: center; /* Centra los íconos horizontalmente */
+    gap: 10px; /* Espacio entre los íconos */
+    margin-top: 80px;
+}
+
+.social-media a img {
+    width: 70px; /* Tamaño reducido de los íconos */
+    height: 70px; /* Tamaño reducido de los íconos */
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+}
+
+.social-media a:hover img {
+    transform: scale(1.1);
+}
+/* Sección de Ubicación */
+.location {
+    text-align: center;
+    padding: 20px 10px;
+    margin-top: 30px;
+}
+
+.location h3 {
+    font-size: 1.5rem;
+    color: #f94d6a;
+    margin-bottom: 15px;
+}
+
+/* Cambios para el iframe del mapa */
+.map-container iframe {
+    width: 95%; /* Ancho un poco mayor */
+    max-width: 500px; /* Tamaño más grande */
+    height: 300px; /* Altura aumentada */
+    border-radius: 10px;
+    border: 5px solid red; /* Marco rojo más visible */
+    background-color: transparent;
+    margin: 0 auto; /* Centrado */
+    display: block; /* Asegura el centrado en todos los navegadores */
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 5%;
+    margin-top: auto; /* Hace que el footer se empuje al fondo */
+}
+
+footer p {
+    margin: 5px 0;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+    .activities {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+
+    main {
+        padding: 15px; /* Espacio adecuado para pantallas pequeñas */
+    }
+}

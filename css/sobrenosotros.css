@@ -1,0 +1,174 @@
+html, body {
+    height: 100%; /* Asegura que html y body ocupen toda la altura */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #ffe6e6, #ffffff);
+    display: flex;
+    flex-direction: column; /* Organiza el contenido en una columna */
+    min-height: 100%; /* Asegura que el body ocupe toda la altura */
+}
+
+main {
+    flex-grow: 1; /* Esto asegura que el contenido principal ocupe el espacio restante */
+}
+
+/* Header styles */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: red; /* Cambiado a rojo sólido */
+    color: white;
+    padding: 15px 5%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+nav {
+    background: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias filas */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem; /* Tamaño de texto adaptable */
+}
+
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+
+
+.about {
+    text-align: center;
+    padding: 60px 20px;
+    margin: 20px;
+    flex-grow: 1; /* Permite que esta sección ocupe el espacio restante */
+}
+
+.about h2 {
+    color: #ff6b6b;
+    font-size: 2.2rem; /* Escalado para pantallas pequeñas */
+    margin-bottom: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    letter-spacing: 2px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Ajuste automático de columnas */
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.about-box {
+    background-color: #fff;
+    border: 2px solid #ff6b6b;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: justify;
+    position: relative;
+    padding-bottom: 30px;
+}
+
+.about-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #ff6b6b, #f94d6a);
+    opacity: 0.2;
+    border-radius: 15px;
+}
+
+.about-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.about-box h3 {
+    font-size: 1.5rem; /* Ajuste para dispositivos móviles */
+    color: #333;
+    margin-bottom: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.about-box p {
+    color: #555;
+    font-size: 1rem; /* Escalado proporcional */
+    line-height: 1.6;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 5%;
+    margin-top: auto; /* Hace que el footer se empuje al fondo */
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+
+    .activities {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}

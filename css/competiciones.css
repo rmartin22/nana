@@ -1,0 +1,179 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: linear-gradient(to bottom, #eaeaea, #ffffff);
+    display: flex; /* Usamos flexbox para que el contenido se distribuya en toda la altura */
+    flex-direction: column; /* Los elementos se apilan verticalmente */
+    min-height: 100vh; /* Asegura que el body ocupe toda la altura de la ventana */
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: red; /* Cambiado a rojo sólido */
+    color: white;
+    padding: 15px 5%;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Navigation styles */
+nav {
+    background: #333;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten en varias filas */
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem; /* Igual que el primer CSS */
+}
+
+nav ul li a:hover {
+    color: #ff6b6b;
+}
+
+
+main {
+    flex-grow: 1; /* Hace que el main ocupe el espacio restante */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.competitions-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.competition-box {
+    background-color: white;
+    border: 3px solid #ff6b6b;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.competition-box h3 {
+    color: #f94d6a;
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.competition-box p {
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.competition-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.3);
+    background-color: #ffe6e6;
+}
+
+@media (min-width: 768px) {
+    .competitions-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+.button {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #f94d6a;
+}
+
+/* Botón para volver al inicio */
+.back-button {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.back-button a {
+    text-decoration: none;
+    background-color: #ff6b6b;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-button a:hover {
+    background-color: #f94d6a;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 10px 5%;
+    margin-top: auto; /* Hace que el footer se empuje al fondo */
+}
+
+footer p {
+    margin: 5px 0;
+}
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    .hero h2 {
+        font-size: 1.8rem;
+    }
+
+
+    .activities {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    footer {
+        font-size: 0.9rem;
+    }
+}
